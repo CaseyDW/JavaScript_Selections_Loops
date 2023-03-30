@@ -47,7 +47,6 @@ while (i <= 100) {
 }
 
 let x = 1;
-
 do {
     let output = "";
 
@@ -63,21 +62,24 @@ do {
     x++;
 } while (x <= 100);
 
-//Exercise Find Value
+//Exercise 4 Find Value
 
-let value = Math.round((Math.random() * 500)); // creates a random number between 0 and 500
+let numberToFind = Math.round(Math.random() * 500); // creates a random number between 0 and 500
 let n = Math.round(Math.random() * (500 - 100) + 100); // creates a random number between 100 and 500
 
-for (let i = 1; i <= n; i++) {
-    if (i == numberToFind) {
-    console.log(`Found ${numberToFind}!`);
-    break;
-    } 
+let foundValue = false;
 
-    if (i == n) {
-console.log(`Did not find ${numberToFind} within 1-${n}..`);
-    }
+for (let i = 1; i <= n; i++) {
+   if (i == numberToFind) {
+ foundValue = true;
+ break;
+   } 
 }
+  if (foundValue) {
+    console.log(`Found ${numberToFind}!`);
+  }  else {
+    console.log(`Did not find ${numberToFind} within 1-${n}..`);
+  }
 
 //Exercise 5 Customized FIZZBUZZ
 
